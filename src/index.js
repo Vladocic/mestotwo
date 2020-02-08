@@ -11,11 +11,14 @@ import PopupPlace from "./modules/PopupPlace";
 import User from "./modules/User";
 
 
-
+const serverUrl =
+    NODE_ENV === "development" ?
+    "http://praktikum.tk/cohort6" :
+    "https://praktikum.tk/cohort6";
 
 
 const api = new Api({
-    url: "http://praktikum.tk/cohort6",
+    url: serverUrl,
     headers: {
         authorization: "2d20a873-4671-48d5-9c2e-062202b34b7f",
         "Content-Type": "application/json"
