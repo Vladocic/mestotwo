@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+    <div class="root">
+        <header class="header root__section">
+            <img src="./images/logo.svg" alt="mesto logo" class="logo">
+        </header>
+        <div class="profile root__section">
+            <div class="user-info">
+                <div class="user-info__photo"></div>
+                <div class="user-info__data">
+                    <h1 class="user-info__name">Владислав Чеснаков</h1>
+                    <p class="user-info__job">Вэб разработчик</p>
+                    <button class="button button_edit">Edit</button>
+                </div>
+                <button class="button user-info__button">+</button>
+            </div>
+        </div>
+
+        <div class="places-list root__section">
+            <!-- Пример вёрстки карточки:
+            <div class="place-card">
+                <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+                    <button class="place-card__delete-icon"></button>
+                </div>
+
+                <div class="place-card__description">
+                    <h3 class="place-card__name">Камчатка</h3>
+                    <button class="place-card__like-icon"></button>
+                </div>
+            </div>
+             конец примера. -->
+        </div>
+
+        <!-- popup для + для добавления карточки-->
+
+        <div class="popup">
+            <div class="popup__content">
+                <img src="./images/close.svg" alt="" class="popup__close">
+                <h3 class="popup__title">Новое место</h3>
+                <form class="popup__form" name="new">
+                    <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+                    <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+                    <button type class="button popup__button popup__button_plus">+</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- новый popup для кнопки edit-->
+
+        <div class="popup popup__edit">
+            <div class="popup__content">
+                <img src="./images/close.svg" alt="" class="popup__close">
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="popup__form popup__form_edit" name="newtwo">
+                    <input type="text" name="youname" class="popup__input popup__input_type_name" placeholder="Имя" maxlength="30">
+
+                    <span id=error class="form__error-message_name visually-hidden">Это обязательное поле</span>
+                    <span id=errorTwo class="form__error-message_name visually-hidden">Должно быть от 2 до 30 символов</span>
+
+                    <input type="text" name="job" class="popup__input popup__input_type_link-url" placeholder="О себе" maxlength="30">
+
+                    <span id=errorSecond class="form__error-message_name visually-hidden">Это обязательное поле</span>
+                    <span id=errorSecondTwo class="form__error-message_name visually-hidden">Должно быть от 2 до 30 символов</span>
+
+                    <button type class="button popup__button popup__button_edit popup__button_active">Сохранить</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="popup popup__image">
+            <div class="popup__content_image">
+                <img class="popup_big-img" src="" alt="Должна быть картинка">
+                <img src="./images/close.svg" alt="" class="popup__close">
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="Api.js"></script>
+    <script src="User.js"></script>
+    <script src="initialCards.js"></script>
+    <script src="Card.js"></script>
+    <script src="Cardlist.js"></script>
+    <script src="PopupEdit.js"></script>
+    <script src="PopupImage.js"></script>
+    <script src="PopupPlace.js"></script>
+
+
+
+
+    <script src="index.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

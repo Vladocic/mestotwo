@@ -1,0 +1,10 @@
+.form__error-message_name {
+    width: 148px;
+    height: 11px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+}
