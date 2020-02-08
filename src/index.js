@@ -1,5 +1,21 @@
+import "./pages/style.css";
+
+
+
+import Api from "./modules/Api";
+import Card from "./modules/Card";
+import CardList from "./modules/Cardlist";
+import PopupEdit from "./modules/PopupEdit";
+import PopupImage from "./modules/PopupImage";
+import PopupPlace from "./modules/PopupPlace";
+import User from "./modules/User";
+
+
+
+
+
 const api = new Api({
-    url: "http://95.216.175.5/cohort6",
+    url: "http://praktikum.tk/cohort6",
     headers: {
         authorization: "2d20a873-4671-48d5-9c2e-062202b34b7f",
         "Content-Type": "application/json"

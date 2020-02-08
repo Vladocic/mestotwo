@@ -1,5 +1,5 @@
 // попап для доабвления новой карточки
-class PopupPlace {
+export default class PopupPlace {
     constructor(container, cardList) {
             this.container = container;
             this.cardList = cardList;
