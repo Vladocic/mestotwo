@@ -20,7 +20,7 @@ Webpack
 https://vladocic.github.io/mestotwo/
 
 ## Версия проекта
-v0.0.2
+v0.0.3
 
 ## Установка проекта
 
@@ -60,8 +60,4 @@ npm run build
 
 ```
 npm run deploy
-``
-
-
-
-
+```
