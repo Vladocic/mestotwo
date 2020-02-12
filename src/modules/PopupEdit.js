@@ -1,5 +1,5 @@
 // поап редактирование профиля (имя/работа)
-class PopupEdit {
+export default class PopupEdit {
     constructor(container, api) {
             this.container = container;
             this.form = this.container.querySelector("form");
@@ -28,9 +28,7 @@ class PopupEdit {
         // вводим новые данные и сохраняем их на странице
     changeName(path, e) {
             e.preventDefault();
-            /** REVIEW: Надо исправить:
-             *   Изменения в DOM и закрытие попапа должны происходить после успешного выполнения запроса
-             **/
+
             const fields = this.form.elements;
 
 
@@ -41,18 +39,10 @@ class PopupEdit {
                     document.querySelector('.user-info__name').textContent = data.name;
                     document.querySelector('.user-info__job').textContent = data.about;
                     this.container.classList.remove('popup_is-opened');
-                    /** REVIEW: Надо исправить:
-                     *   Здесь нужно обновить данные в DOM и закрыть попап
-                     **/
+
                 })
-                /** REVIEW: Можно лучше:
-                 *   Далее 2 then в цепочке лишние, не понятно их предназначение
-                 **/
-                /** REVIEW: Можно лучше:
-                 *   Хорошо, что обработана ошибка
-                 *  Но можно так же показать её пользователю - простой способ без  лишней верстки window.alert(`текст ошибки`)
-                 **/
-                .catch(this.api.error);
+
+            .catch(this.api.error);
 
 
 

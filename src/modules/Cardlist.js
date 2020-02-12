@@ -1,5 +1,5 @@
 // листа с карточками
-class CardList {
+export default class CardList {
     constructor(container, exampleCard, api) {
             this.container = container;
             this.exampleCard = exampleCard;
